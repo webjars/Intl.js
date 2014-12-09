@@ -1,4 +1,5 @@
-webjars-andyearnshaw-intl
-=========================
+WebJar for Intl.js
 
-WebJar package of Andy Earnshaw's excellent Intl.js library.
+More info: http://webjars.org
+
+Upstream: https://github.com/andyearnshaw/Intl.js
