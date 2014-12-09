@@ -21,18 +21,6 @@
         <upstream.version>0.1.4</upstream.version>
         <upstream.url>https://raw.githubusercontent.com/andyearnshaw/Intl.js/v${upstream.version}/dist</upstream.url>
         <destDir>${project.build.outputDirectory}/META-INF/resources/webjars/${project.artifactId}/${version}</destDir>
-        <requirejs>
-            {
-                "paths": {
-                    "intl": "intl"
-                },
-                "shim": {
-                    "intl": {
-                      exports: 'Intl'
-                    }
-                }
-            }
-        </requirejs>
     </properties>
 
     <developers>
