@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
-    
+
     <parent>
         <groupId>org.sonatype.oss</groupId>
         <artifactId>oss-parent</artifactId>
@@ -10,7 +10,7 @@
 
     <packaging>jar</packaging>
     <groupId>org.webjars</groupId>
-    <artifactId>react-router</artifactId>
+    <artifactId>intl-js</artifactId>
     <version>0.1.4-SNAPSHOT</version>
     <name>Intl.js</name>
     <description>WebJar package of Andy Earnshaw's excellent Intl.js polyfill.</description>
@@ -41,7 +41,7 @@
     </licenses>
 
     <scm>
-        <url>http://github.com/webjars/react-router</url>
+        <url>http://github.com/webjars/intl-js</url>
         <connection>scm:git:https://github.com/webjars/intl-js.git</connection>
         <developerConnection>scm:git:https://github.com/webjars/intl-js.git</developerConnection>
         <tag>HEAD</tag>
@@ -62,13 +62,13 @@
                         </goals>
                         <configuration>
                             <url>${upstream.url}</url>
-                            <fromFile>${upstream.version}.zip</fromFile>
+                            <fromFile>v${upstream.version}.zip</fromFile>
                             <toFile>${project.build.directory}/${project.artifactId}.zip</toFile>
                         </configuration>
                     </execution>
                 </executions>
             </plugin>
-            
+
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-antrun-plugin</artifactId>
@@ -83,7 +83,14 @@
                                 <unzip src="${project.build.directory}/${project.artifactId}.zip" dest="${project.build.directory}" />
                                 <echo message="moving resources" />
                                 <move todir="${destDir}">
-                                    <fileset dir="${project.build.directory}/intl-js-${upstream.version}/build" />
+                                    <fileset dir="${project.build.directory}/Intl.js-${upstream.version}">
+                                        <exclude name="Gruntfile.js" />
+                                        <exclude name="bower.json" />
+                                        <exclude name="package.json" />
+                                        <exclude name="tasks/**"/>
+                                        <exclude name="tests/**"/>
+                                        <exclude name="tools/**"/>
+                                    </fileset>
                                 </move>
                             </target>
                         </configuration>
