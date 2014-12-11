@@ -11,7 +11,7 @@
     <packaging>jar</packaging>
     <groupId>org.webjars</groupId>
     <artifactId>Intl.js</artifactId>
-    <version>0.1.4-SNAPSHOT</version>
+    <version>0.1.4</version>
     <name>Intl.js</name>
     <description>WebJar package of Andy Earnshaw's excellent Intl.js polyfill.</description>
     <url>http://webjars.org</url>
@@ -48,7 +48,7 @@
         <url>http://github.com/webjars/Intl.js</url>
         <connection>scm:git:https://github.com/webjars/Intl.js.git</connection>
         <developerConnection>scm:git:https://github.com/webjars/Intl.js.git</developerConnection>
-        <tag>HEAD</tag>
+        <tag>Intl.js-0.1.4</tag>
     </scm>
 
     <build>
@@ -91,9 +91,9 @@
                                         <exclude name="Gruntfile.js" />
                                         <exclude name="bower.json" />
                                         <exclude name="package.json" />
-                                        <exclude name="tasks/**"/>
-                                        <exclude name="tests/**"/>
-                                        <exclude name="tools/**"/>
+                                        <exclude name="tasks/**" />
+                                        <exclude name="tests/**" />
+                                        <exclude name="tools/**" />
                                     </fileset>
                                 </move>
                             </target>
