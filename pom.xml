@@ -11,7 +11,7 @@
     <packaging>jar</packaging>
     <groupId>org.webjars</groupId>
     <artifactId>Intl.js</artifactId>
-    <version>0.1.5-SNAPSHOT</version>
+    <version>0.1.4-1-SNAPSHOT</version>
     <name>Intl.js</name>
     <description>WebJar package of Andy Earnshaw's excellent Intl.js polyfill.</description>
     <url>http://webjars.org</url>
@@ -24,6 +24,10 @@
         <extractDir>${project.build.directory}/intl-js-${upstream.version}</extractDir>
         <requirejs>
             {
+                "paths": {
+                    "Intl-complete": "Intl.complete",
+                    "Intl": "Intl"
+                }
             }
         </requirejs>
     </properties>
