@@ -11,7 +11,7 @@
     <packaging>jar</packaging>
     <groupId>org.webjars</groupId>
     <artifactId>Intl.js</artifactId>
-    <version>0.1.4-1-SNAPSHOT</version>
+    <version>0.1.4-1</version>
     <name>Intl.js</name>
     <description>WebJar package of Andy Earnshaw's excellent Intl.js polyfill.</description>
     <url>http://webjars.org</url>
@@ -52,7 +52,7 @@
         <url>http://github.com/webjars/Intl.js</url>
         <connection>scm:git:https://github.com/webjars/Intl.js.git</connection>
         <developerConnection>scm:git:https://github.com/webjars/Intl.js.git</developerConnection>
-        <tag>HEAD</tag>
+        <tag>Intl.js-0.1.4-1</tag>
     </scm>
 
     <build>
@@ -87,17 +87,17 @@
                         <goals><goal>run</goal></goals>
                         <configuration>
                             <target>
-                                <echo message="unzip binary archive"/>
-                                <unzip src="${project.build.directory}/${project.artifactId}.zip" dest="${project.build.directory}"/>
-                                <echo message="moving resources"/>
+                                <echo message="unzip binary archive" />
+                                <unzip src="${project.build.directory}/${project.artifactId}.zip" dest="${project.build.directory}" />
+                                <echo message="moving resources" />
                                 <move todir="${destDir}">
                                     <fileset dir="${project.build.directory}/Intl.js-${upstream.version}">
-                                        <exclude name="Gruntfile.js"/>
-                                        <exclude name="bower.json"/>
-                                        <exclude name="package.json"/>
-                                        <exclude name="tasks/**"/>
-                                        <exclude name="tests/**"/>
-                                        <exclude name="tools/**"/>
+                                        <exclude name="Gruntfile.js" />
+                                        <exclude name="bower.json" />
+                                        <exclude name="package.json" />
+                                        <exclude name="tasks/**" />
+                                        <exclude name="tests/**" />
+                                        <exclude name="tools/**" />
                                     </fileset>
                                 </move>
                             </target>
